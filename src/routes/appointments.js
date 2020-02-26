@@ -2,6 +2,7 @@ const router = require("express").Router();
 
 module.exports = (db, updateAppointment) => {
   router.get("/appointments", (request, response) => {
+    console.log('recieved get');
     db.query(
       `
       SELECT
